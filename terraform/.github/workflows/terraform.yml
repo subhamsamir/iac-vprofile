@@ -1,5 +1,4 @@
 name: "Vprofile IAC"
-
 on:
   push:
     branches:
@@ -14,8 +13,9 @@ on:
       - terraform/**
 
 env:
+  # Credentials for deployment to aws
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Corrected typo in the variable name
+  AWS_SECERET_ACCESS_KEY: ${{ secrets.AWS_SECERET_ACCESS_KEY }}
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
   AWS_REGION: ap-south-1
   EKS_CLUSTER: vprofile-eks
